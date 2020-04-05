@@ -1,10 +1,25 @@
 function angkaPalindrome(num) {
-  numString = num.toString();
-  a = '';
+  var condition = false; 
+  var numString = '';
+  var temp = 0;
+  var hasil = 0;
   
-  for (let i = numString.length-1; 0 <= i; i--) {
-    a += numString[i];
+  while(condition === false) {
+    num++;
+    numString = num.toString();
+    numBalik = "";
+
+    for(k = numString.length - 1; k >= 0; k--) {
+      numBalik += numString[k];
+    }
+
+    temp = parseInt(numBalik);
+    if(temp == num) {
+      condition = true;
+      hasil = num;
+    }
   }
+  return hasil;
 }
 
 // TEST CASES
