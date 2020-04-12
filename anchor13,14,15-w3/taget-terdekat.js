@@ -13,7 +13,6 @@ function targetTerdekat(arr) {
         return Math.abs(x - y)
       }
     }
-    
     return 0
   }
   
