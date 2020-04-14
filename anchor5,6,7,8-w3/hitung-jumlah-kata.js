@@ -2,14 +2,15 @@ function hitungJumlahKata(kalimat) {
     var arrayKata = [];
     var temp = ''; 
     
-    for (let i = 0; i <= kalimat.length; i++) { 
-        temp += kalimat[i];
-        if (kalimat[i] == ' ' || kalimat[i] == kalimat[kalimat.length]) {
-            arrayKata.push(temp);
+    for (let i = 0; i < kalimat.length; i++) { 
+        if (kalimat[i] !== ' ') {
+            temp += kalimat[i];
         }
-    } /* 
-    console.log(arrayKata.length);
-    console.log(temp); */
+        if (kalimat[i] == ' ' || i == kalimat.length-1) {
+            arrayKata.push(temp);
+            temp = '';
+        }
+    }
     return arrayKata.length;
 }
 
